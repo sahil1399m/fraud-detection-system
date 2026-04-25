@@ -23,9 +23,14 @@ app.add_middleware(
 )
 
 # ── Load model and scaler on startup ───────────────────────
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_PATH  = os.path.join(BASE_DIR, "models", "xgb_model.pkl")
 SCALER_PATH = os.path.join(BASE_DIR, "models", "scaler.pkl")
+
+# Fallback for Render deployment
+if not os.path.exists(MODEL_PATH):
+    MODEL_PATH  = os.path.join(os.getcwd(), "..", "models", "xgb_model.pkl")
+    SCALER_PATH = os.path.join(os.getcwd(), "..", "models", "scaler.pkl")
 
 model  = joblib.load(MODEL_PATH)
 scaler = joblib.load(SCALER_PATH)
