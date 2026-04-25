@@ -1,6 +1,8 @@
 venv/
 __pycache__/
-*.pkl
-*.csv
 .env
 .DS_Store
+data/creditcard.csv
+data/creditcardfraud.zip
+data/processed/
+.ipynb_checkpoints/
