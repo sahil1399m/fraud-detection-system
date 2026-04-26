@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const API = 'http://127.0.0.1:8000'
+const API = 'https://fraud-detection-api2.onrender.com'
 
 const FRAUD_SAMPLE = {
   Time: 406, V1: -2.3122265, V2: 1.9519834, V3: -1.6098867,

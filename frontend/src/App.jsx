@@ -6,7 +6,7 @@ import RocChart from './components/RocChart'
 import TransactionTable from './components/TransactionTable'
 import PredictForm from './components/PredictForm'
 
-const API = 'http://127.0.0.1:8000'
+const API = 'https://fraud-detection-api2.onrender.com'
 
 export default function App() {
   const [stats, setStats]               = useState(null)
